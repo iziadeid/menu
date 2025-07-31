@@ -5,11 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Restaurant Menu</title>
   <style>
-    body { margin: 0; text-align: center; background: #fff; }
-    img { max-width: 100%; height: auto; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f8f8f8;
+      color: #333;
+      direction: rtl; /* Arabic RTL direction */
+    }
+    .menu-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 32px;
+      border-bottom: 2px solid #e91e63;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed #ddd;
+      padding: 10px 0;
+      font-size: 18px;
+    }
+    .menu-item span.name-ar {
+      font-weight: bold;
+    }
+    .price {
+      min-width: 60px;
+      text-align: left;
+      font-weight: bold;
+      color: #e91e63;
+    }
+    @media (max-width: 600px) {
+      .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .price {
+        text-align: right;
+        margin-top: 5px;
+      }
+    }
   </style>
 </head>
 <body>
-  <img src="Screenshot 2024-09-30 014053.png" alt="Restaurant Menu" />
+  <div class="menu-container">
+    <h1>Restaurant Name | اسم المطعم</h1>
+
+    <div class="section">
+      <h2>Appetizers | المقبلات</h2>
+      <div class="menu-item">
+        <span class="name-ar">خبز بالثوم | Garlic Bread</span>
+        <span class="price">25</span>
+      </div>
+      <div class="menu-item">
+        <span class="name-ar">سلطة سيزر | Caesar Salad</span>
+        <span class="price">35</span>
+      </div>
+      <div class="menu-item">
+        <span class="name-ar">شوربة اليوم | Soup of the Day</span>
+        <span class="price">30</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Main Dishes | الأطباق الرئيسية</h2>
+      <div class="menu-item">
+        <span class="name-ar">برجر لحم | Beef Burger</span>
+        <span class="price">65</span>
+      </div>
+      <div class="menu-item">
+        <span class="name-ar">دجاج مشوي | Grilled Chicken</span>
+        <span class="price">70</span>
+      </div>
+      <div class="menu-item">
+        <span class="name-ar">سباغيتي بولونيز | Spaghetti Bolognese</span>
+        <span class="price">60</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Desserts | الحلويات</h2>
+      <div class="menu-item">
+        <span class="name-ar">تشيز كيك | Cheesecake</span>
+        <span class="price">40</span>
+      </div>
+      <div class="menu-item">
+        <span class="name-ar">كيك لافا | Chocolate Lava Cake</span>
+        <span class="price">45</span>
+      </div>
+      <div class="menu-item">
+        <span class="name-ar">آيس كريم | Ice Cream</span>
+        <span class="price">25</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Drinks | مشروبات</h2>
+      <div class="menu-item">
+        <span class="name-ar">إسبريسو | Espresso</span>
+        <span class="price">20</span>
+      </div>
+      <div class="menu-item">
+        <span class="name-ar">لاتيه مثلج | Iced Latte</span>
+        <span class="price">30</span>
+      </div>
+      <div class="menu-item">
+        <span class="name-ar">عصير فريش | Fresh Juice</span>
+        <span class="price">35</span>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
