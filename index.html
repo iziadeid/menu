@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --primary: #e91e63;
@@ -38,10 +39,9 @@
       color: var(--text);
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       min-height: 100vh;
-      padding: 2rem;
-      transition: background 0.3s, color 0.3s;
+      padding: 2rem 1rem;
     }
 
     .menu-wrapper {
@@ -56,15 +56,28 @@
     }
 
     .menu-header {
-      background: var(--primary);
-      color: white;
-      padding: 1.5rem;
+      padding: 2rem 1rem 1rem;
+      background: var(--card-bg);
     }
 
-    .menu-header h1 {
-      font-size: 28px;
-      letter-spacing: 0.5px;
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 5px var(--shadow);
+    }
+
+    .restaurant-name {
+      font-size: 26px;
       font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .restaurant-address {
+      font-size: 15px;
+      color: #777;
     }
 
     .menu-image {
@@ -75,18 +88,41 @@
     }
 
     .menu-footer {
-      padding: 1rem;
+      padding: 1.5rem;
       font-size: 14px;
-      color: #888;
       background: var(--footer-bg);
-      transition: background 0.3s, color 0.3s;
+      color: #666;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .menu-footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      font-size: 18px;
+      color: #999;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--primary);
     }
 
     @media (max-width: 600px) {
-      .menu-header h1 {
-        font-size: 22px;
+      .restaurant-name {
+        font-size: 20px;
       }
-
       .menu-footer {
         font-size: 13px;
       }
@@ -96,14 +132,24 @@
 <body>
   <div class="menu-wrapper">
     <div class="menu-header">
-      <h1>اسم المطعم | Restaurant Name</h1>
+      <img src="logo.jpg" alt="Restaurant Logo" class="logo" />
+      <div class="restaurant-name">اسم المطعم | Restaurant Name</div>
+      <div class="restaurant-address">
+        📍 123 Food Street, Cairo, Egypt<br>
+        <a href="https://goo.gl/maps/XxXxXxX" target="_blank">View on Map</a>
+      </div>
     </div>
 
-    <!-- Replace with your own menu image -->
-    <img class="menu-image" src="menu.jpeg" alt="Restaurant Menu" />
+    <!-- Replace this image with your actual menu image -->
+    <img class="menu-image" src="menu.jpg" alt="Restaurant Menu" />
 
     <div class="menu-footer">
-      📱 Scan the QR code again to check for updates!
+      <div>📱 Scan the QR code again to view the latest menu</div>
+      <div class="social-icons">
+        <a href="https://facebook.com/yourrestaurant" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/yourrestaurant" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
     </div>
   </div>
 </body>
