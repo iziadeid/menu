@@ -8,8 +8,22 @@
     :root {
       --primary: #e91e63;
       --bg: #fdfdfd;
+      --card-bg: #ffffff;
       --text: #222;
+      --footer-bg: #f4f4f4;
       --shadow: rgba(0, 0, 0, 0.08);
+      --border: #eee;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --card-bg: #1e1e1e;
+        --text: #f0f0f0;
+        --footer-bg: #1a1a1a;
+        --shadow: rgba(255, 255, 255, 0.05);
+        --border: #333;
+      }
     }
 
     * {
@@ -27,16 +41,18 @@
       align-items: center;
       min-height: 100vh;
       padding: 2rem;
+      transition: background 0.3s, color 0.3s;
     }
 
     .menu-wrapper {
       max-width: 800px;
       width: 100%;
-      background: white;
+      background: var(--card-bg);
       border-radius: 16px;
       box-shadow: 0 10px 30px var(--shadow);
       overflow: hidden;
       text-align: center;
+      transition: background 0.3s, box-shadow 0.3s;
     }
 
     .menu-header {
@@ -47,25 +63,32 @@
 
     .menu-header h1 {
       font-size: 28px;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
+      font-weight: 600;
     }
 
     .menu-image {
       width: 100%;
       display: block;
-      border-top: 2px solid #eee;
+      border-top: 2px solid var(--border);
+      border-bottom: 2px solid var(--border);
     }
 
     .menu-footer {
       padding: 1rem;
       font-size: 14px;
       color: #888;
-      background: #fafafa;
+      background: var(--footer-bg);
+      transition: background 0.3s, color 0.3s;
     }
 
     @media (max-width: 600px) {
       .menu-header h1 {
         font-size: 22px;
+      }
+
+      .menu-footer {
+        font-size: 13px;
       }
     }
   </style>
@@ -76,11 +99,11 @@
       <h1>اسم المطعم | Restaurant Name</h1>
     </div>
 
-    <!-- Replace with your own image -->
+    <!-- Replace with your own menu image -->
     <img class="menu-image" src="menu.jpeg" alt="Restaurant Menu" />
 
     <div class="menu-footer">
-      Scan the QR code again to view latest updates ✨
+      📱 Scan the QR code again to check for updates!
     </div>
   </div>
 </body>
