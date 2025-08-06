@@ -35,18 +35,7 @@ html, body {
 /* Shared Containers */
 
 .menu-wrapper {
-  display: flex;
-    justify-content: start;
-  align-items: center;
-  padding: 2rem 1rem;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  gap: 1rem;
-      position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    width: 100%;
+    padding: 5rem 1rem;
 }
 
 .menu-container {
@@ -147,4 +136,5 @@ html, body {
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
     border: 1px solid var(--accent);
 }
+
 
