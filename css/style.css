@@ -29,13 +29,14 @@ html, body {
   display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+
 }
 
 /* Shared Containers */
 
 .menu-wrapper {
     padding: 5rem 1rem;
+  max-width: 500px;
 }
 
 .menu-container {
@@ -136,5 +137,6 @@ html, body {
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
     border: 1px solid var(--accent);
 }
+
 
 
