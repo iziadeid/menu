@@ -51,6 +51,9 @@ html, body {
   margin:12px;
 }
 
+.logo {
+  width: 130px;
+}
 /* Homepage Grid */
 .grid {
   display: grid;
@@ -72,12 +75,15 @@ html, body {
   background-color: var(--hover-bg);
   transform: scale(1.03);
 }
+.img {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
 
 .category img {
   width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
   margin-bottom: 0.5rem;
 }
 
@@ -138,6 +144,7 @@ html, body {
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
     border: 1px solid var(--accent);
 }
+
 
 
 
